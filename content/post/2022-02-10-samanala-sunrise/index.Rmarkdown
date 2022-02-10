@@ -1,0 +1,65 @@
+---
+title: Samanala Sunrise
+author: VajiraL
+date: '2022-02-10'
+slug: samanala-sunrise
+categories: []
+tags: []
+subtitle: ''
+summary: ''
+authors: []
+lastmod: '2022-02-10T17:35:34+09:00'
+featured: no
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+projects: []
+---
+
+# Viewshed analysis
+
+Sight of sunrise over *Samanala Kanda* makes for a glorious morning. On a good day there are many places in western region where you can see this. There was one place on my commute to school where, if my usual bus came on time, I could see the siluette of the *Sri Pada* before the rising sun. I always tried to catch a glimpse through the crowd.
+
+It was an interesting problem for the spatial analyst in me to **map all the places that can see a *Samanala Kanda* sunrise**. Here's my attempt to do that using the *viewshed analysis* tools in QGIS.
+
+Both GRASS and GDAL packages in QGIS have viewshed analysis tools. There are also more feature-rich plugins like *visibility analysis*.
+
+## Data
+
+For visibility analysis, we need a digital elevation model. I used the JAXA ALOS 3D DEM which is a 30 m global DEM.
+
+## Approach
+
+Viewshed analysis finds the area visible from a certain location. How can we use that to solve the problem of finding the places that can see a *Sri Pada* sunrise ?
+
+I consider a *Sri Pada* sunrise is conditional up on the following two requirements. 1. There should be a direct line-of-sight between the observer and the mountain 2. Relative to the observer, the sun should rise behind the mountain
+
+Areas that satisfy the first requirement can be found using viewshed analysis. However, if we did the analysis for the topmost point, results will be exaggerated because it will include any point that can see even just a tip of the mountain. So it will include places from where *Samanala Kanda* is hidden behind other landmasses bar a tiny tip. So for good measure, I run the viewshed analysis from a point on the western face of the mountain, about 200 m below the top.
+
+Now for the second requirement, we need to consider the direction of sunrise. Direction of sunrise changes through out the year. While it is not very apparent when you live near the equator, the sun path moves north in the north hemispheric summer and south in the winter. Extreme of this movement happens on the solstice, usually June 21 and December 21. So what we simply need to do is find the directions of the sunrise seen from Sri Pada for those two days. Triangle formed between these two lines and to the west of the mountain is the areas where such a sunrise can be seen.
+
+![](images/Untitled%20Diagram.drawio.png)
+
+Finally the areas that satisfy both requirements can be found by intersecting the two results.
+
+Here is an embedded map of the results where you can zoom in and see where you can see a magnificent sunrise over *Sri Pada*. Looks like there are many good spots around Colombo to catch glorious view.
+
+```{r}
+library(leaflet)
+library(rgdal)
+
+path <- 'D:/Random/projects/SriPadaSunrise/sunrise_mask2.sqlite'
+cone <- readOGR(path)
+
+m <- leaflet() %>%
+  setView(lng = 80.5, lat = 6.8, zoom = 10) %>%
+  addTiles() %>%  # Add default OpenStreetMap map tiles
+  addMarkers(lng=80.499, lat=6.808, popup="Samanala Kanda") %>%
+  addPolygons(data=cone, color = "#bf009c", smoothFactor = 0.5,
+    opacity = 1.0, fillOpacity = 0.5)
+
+#m <- leaflet(cone) %>%
+#  addPolygons(color = "#444444")
+m  
+```

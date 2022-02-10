@@ -14,13 +14,15 @@ organizations:
   url: https://www.u-tokyo.ac.jp/
 
 # Short bio (displayed in user profile at end of posts)
-bio: My research and professional interests are planning, design and modelling of water supply and sanitation systems andspatial analysis
+bio: My research and professional interests are planning, design and modelling of water supply and sanitation systems and spatial analysis
 
 # Interests to show in About widget
 interests:
 - Water and wastewater treatment
-- Hydraulic and water quality modelling 
-- Spatial analysis
+- Hydraulic and water quality modelling
+- Geospatial analysis
+- Remote sensing
+- Sustainable cities
 
 # Education to show in About widget
 education:
@@ -70,6 +72,6 @@ email: ""
 highlight_name: true
 ---
 
-I am a double master student at the University of Tokyo and the United Nations University. At the University of Tokyo I am studying Urban Environmental Engineering at the Department of Urban Engineering. I am researching sustainable sanitation planning systems using spatial data analysis. At the United Nations University, I study in the Sustainability MSc programme, where my research is in the field of development economics.
+I am a double master student at the University of Tokyo and the United Nations University. At the University of Tokyo I am studying Urban Environmental Engineering at the Department of Urban Engineering. I am researching sustainable sanitation planning systems using spatial data analysis. At the United Nations University, I study in the Sustainability MSc programme.
 
-Before moving to Japan in 2020 for higher studies, I worked in the water and sanitation sector in Sri Lanka for three years after graduating from the Civil Engineering programme at the University of Moratuwa. I worked in both private and public sector and had the opportunity to be part of some exciting engineering projects. Modelling and design of water and sewerage systems was one of my main responsibilities. I extensively used geospatial analysis tools in my work, and while doing that developed a passion for cartography too !
+Before moving to Japan in 2020 for higher studies, I worked in the water and sanitation sector in Sri Lanka for three years after graduating from the Civil Engineering programme at the University of Moratuwa. I worked in both private and public sector and had the opportunity to be part of some exciting engineering projects. Modelling and design of water and sewerage systems were my main responsibilities.
