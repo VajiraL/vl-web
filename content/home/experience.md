@@ -22,28 +22,36 @@ date_format: Jan 2006
 #   Leave `date_end` empty if it's your current employer.
 #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
 experience:
-  - title: CEO
-    company: GenCoin
-    company_url: ''
-    company_logo: org-gc
-    location: California
-    date_start: '2021-01-01'
-    date_end: ''
+  - title: Civil Engineer
+    company: National Water Supply & Drainage Board, Sri Lanka
+    company_url: 'http://www.waterboard.lk'
+    company_logo: nwsdb
+    location: Colombo
+    date_start: '2019-02-01'
+    date_end: '2020-09-30'
     description: |2-
         Responsibilities include:
         
-        * Analysing
-        * Modelling
-        * Deploying
+        * Hydraulic modelling of sewer networks
+        * Planning and design of sewerage systems
+        * Preparation of BOQs and tenders
+        * Detailed drawings and plans
+        * GIS analysis and visualizations
         
-  - title: Professor of Semiconductor Physics
-    company: University X
-    company_url: ''
-    company_logo: org-x
-    location: California
-    date_start: '2016-01-01'
-    date_end: '2020-12-31'
-    description: Taught electronic engineering and researched semiconductor physics.
+  - title: Civil Engineer
+    company: Ceywater Consultants (pvt) Ltd.
+    company_url: 'http://www.ceywater.com/'
+    company_logo: ceywater
+    location: Colombo
+    date_start: '2017-07-01'
+    date_end: '2019-01-31'
+    description:  |2-
+        Responsibilities include:
+        
+        * Hydraulic and water quality modelling of water distribution networks
+        * Planning and design of water supply systems
+        * Geotechnical analysis and design
+        * Modelling and design of hydraulic structures
 
 design:
   columns: '2'

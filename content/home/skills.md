@@ -16,18 +16,18 @@ subtitle:
 # - Add/remove as many `feature` blocks below as you like.
 # - For available icons, see: https://wowchemy.com/docs/page-builder/#icons
 feature:
-- description: 90%
-  icon: r-project
-  icon_pack: fab
-  name: R
-- description: 100%
-  icon: chart-line
+- description: Geospatial analysis and visualization
+  icon: globe-asia
   icon_pack: fas
-  name: Statistics
-- description: 10%
-  icon: camera-retro
+  name: GIS
+- description: Design of water supply and sewerage systems
+  icon: faucet
   icon_pack: fas
-  name: Photography
+  name: WASH
+- description: Data analysis, statistics and modelling 
+  icon: chart-bar
+  icon_pack: fas
+  name: Stat
 
 # Uncomment to use emoji icons.
 #- icon: ":smile:"
